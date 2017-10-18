@@ -50,7 +50,7 @@
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);     
      }
     //显示下载界面
-    request.setVisibleInDownloadsUi(false);
+    request.setVisibleInDownloadsUi(true);
     }
 ```
 通过mananger.enqueue(request)获取到的id，从而还可以控制取消当前任务以及查询当前任务的状态。此时取消任务则清空当前文件（无论是否下载完成，则把下载的东西全部清空）。若想移除任务直接用 **manager.remove(id);** 则可取消任务。也可以通过id获取到当前下载的任务的状态：
